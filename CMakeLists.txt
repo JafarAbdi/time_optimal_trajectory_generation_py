@@ -40,15 +40,11 @@ pybind11_strip(time_optimal_trajectory_generation_py)
 
 include(GNUInstallDirs)
 # Determine the python installation directory
-execute_process(COMMAND "${Python_EXECUTABLE}" "-c" "import site; print(site.getsitepackages()[0])"
-  OUTPUT_VARIABLE PYTHON_SITE_PACKAGES
-  OUTPUT_STRIP_TRAILING_WHITESPACE
-)
+set(PYTHON_SITE_PACKAGES ${CMAKE_INSTALL_LIBDIR}/python${Python_VERSION_MAJOR}.${Python_VERSION_MINOR}/site-packages)
+message(STATUS "Python site-packages directory: " ${PYTHON_SITE_PACKAGES})
 
 install(TARGETS time_optimal_trajectory_generation_py
-  ARCHIVE DESTINATION ${PYTHON_SITE_PACKAGES}
   LIBRARY DESTINATION ${PYTHON_SITE_PACKAGES}
-  RUNTIME DESTINATION ${PYTHON_SITE_PACKAGES}
 )
 install(TARGETS time_optimal_trajectory_generation
   ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}

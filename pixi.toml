@@ -10,7 +10,7 @@ platforms = ["linux-64"]
 configure = "cmake -GNinja -DCMAKE_BUILD_TYPE=RelWithDebInfo -S . .build/relwithdebinfo"
 build = { cmd = "cmake --build .build/relwithdebinfo", depends_on = ["configure"] }
 install = { cmd = "cmake --install .build/relwithdebinfo --prefix .pixi/envs/default", depends_on = ["build"] }
-conda-build = "rattler-build build --output-dir .build/conda"
+conda-build = "rattler-build build --output-dir .build/conda --recipe rattler-recipe/recipe.yaml"
 upload = "rattler-build upload prefix --channel testing "
 
 [dependencies]

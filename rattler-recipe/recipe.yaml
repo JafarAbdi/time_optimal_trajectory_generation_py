@@ -16,7 +16,6 @@ build:
           -DCMAKE_INSTALL_PREFIX=$PREFIX \
           -DCMAKE_BUILD_TYPE=Release \
           $SRC_DIR
-    ninja
     ninja install
 
 requirements:
