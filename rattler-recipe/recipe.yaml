@@ -7,7 +7,6 @@ package:
 
 source:
   git: https://github.com/JafarAbdi/time_optimal_trajectory_generation_py.git
-  tag: ${{ version }}
 
 build:
   number: 0
