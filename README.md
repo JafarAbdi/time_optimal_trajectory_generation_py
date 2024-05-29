@@ -20,5 +20,5 @@ pixi run python example.py
 
 ```bash
 pixi run conda-build
-pixi run upload pixi run upload --api-key <key> .build/conda/linux-64/XXX.conda
+pixi run upload --api-key <key> .build/conda/linux-64/XXX.conda
 ```
