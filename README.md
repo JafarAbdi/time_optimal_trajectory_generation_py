@@ -13,7 +13,7 @@ pixi run install
 ## Example
 
 ```bash
-pixi run python example.py
+pixi run python examples/example.py
 ```
 
 ## Releasing a new version to conda
