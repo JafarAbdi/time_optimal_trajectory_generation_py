@@ -1,0 +1,19 @@
+[build-system]
+requires = [
+  "setuptools>=42",
+  "cmake>=3.18",
+  "ninja",
+  "numpy",
+  "pybind11",
+  "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[tool.cibuildwheel]
+archs = ["auto"]
+build-verbosity = 1
+
+before-all = ".github/workflows/before_all.sh"
+before-build = "pip install 'pybind11[global]'"
+
+manylinux-x86_64-image = "quay.io/pypa/manylinux_2_28_x86_64"
