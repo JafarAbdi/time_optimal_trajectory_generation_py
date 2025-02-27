@@ -1,0 +1,9 @@
+@PACKAGE_INIT@
+
+if(NOT TARGET
+   time_optimal_trajectory_generation::time_optimal_trajectory_generation
+)
+  include(${CMAKE_CURRENT_LIST_DIR}/@targets_export_name@.cmake)
+endif()
+
+check_required_components(time_optimal_trajectory_generation)
