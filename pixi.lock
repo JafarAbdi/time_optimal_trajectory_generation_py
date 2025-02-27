@@ -3,8 +3,6 @@ environments:
   default:
     channels:
     - url: https://conda.anaconda.org/conda-forge/
-    indexes:
-    - https://pypi.org/simple
     packages:
       linux-64:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/_libgcc_mutex-0.1-conda_forge.tar.bz2
@@ -50,8 +48,6 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/ninja-1.12.1-h297d8ca_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/numpy-1.26.4-py311h64a7726_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/openssl-3.4.0-hb9d3cd8_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/pybind11-2.12.0-py311h9547e67_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/pybind11-global-2.12.0-py311h9547e67_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/python-3.11.0-he550d4f_1_cpython.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/python_abi-3.11-5_cp311.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/rattler-build-0.16.2-h72610f6_0.conda
@@ -63,9 +59,6 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/xz-gpl-tools-5.6.3-hbcc6ac9_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/xz-tools-5.6.3-hb9d3cd8_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zstd-1.5.6-ha6fb4c9_0.conda
-      - pypi: https://files.pythonhosted.org/packages/84/c2/80633736cd183ee4a62107413def345f7e6e3c01563dbca1417363cf957e/build-1.2.2.post1-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/88/ef/eb23f262cca3c0c4eb7ab1933c3b1f03d021f2c48f54763065b6f0e321be/packaging-24.2-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/bd/24/12818598c362d7f300f18e74db45963dbcb85150324092410c8b49405e42/pyproject_hooks-1.2.0-py3-none-any.whl
   wheel:
     channels:
     - url: https://conda.anaconda.org/conda-forge/
@@ -189,41 +182,6 @@ packages:
   license_family: MIT
   size: 350424
   timestamp: 1725267803672
-- pypi: https://files.pythonhosted.org/packages/84/c2/80633736cd183ee4a62107413def345f7e6e3c01563dbca1417363cf957e/build-1.2.2.post1-py3-none-any.whl
-  name: build
-  version: 1.2.2.post1
-  sha256: 1d61c0887fa860c01971625baae8bdd338e517b836a2f70dd1f7aa3a6b2fc5b5
-  requires_dist:
-  - packaging>=19.1
-  - pyproject-hooks
-  - colorama ; os_name == 'nt'
-  - importlib-metadata>=4.6 ; python_full_version < '3.10.2'
-  - tomli>=1.1.0 ; python_full_version < '3.11'
-  - furo>=2023.8.17 ; extra == 'docs'
-  - sphinx~=7.0 ; extra == 'docs'
-  - sphinx-argparse-cli>=1.5 ; extra == 'docs'
-  - sphinx-autodoc-typehints>=1.10 ; extra == 'docs'
-  - sphinx-issues>=3.0.0 ; extra == 'docs'
-  - build[uv,virtualenv] ; extra == 'test'
-  - filelock>=3 ; extra == 'test'
-  - pytest>=6.2.4 ; extra == 'test'
-  - pytest-cov>=2.12 ; extra == 'test'
-  - pytest-mock>=2 ; extra == 'test'
-  - pytest-rerunfailures>=9.1 ; extra == 'test'
-  - pytest-xdist>=1.34 ; extra == 'test'
-  - wheel>=0.36.0 ; extra == 'test'
-  - setuptools>=42.0.0 ; python_full_version < '3.10' and extra == 'test'
-  - setuptools>=56.0.0 ; python_full_version == '3.10.*' and extra == 'test'
-  - setuptools>=56.0.0 ; python_full_version == '3.11.*' and extra == 'test'
-  - setuptools>=67.8.0 ; python_full_version >= '3.12' and extra == 'test'
-  - build[uv] ; extra == 'typing'
-  - importlib-metadata>=5.1 ; extra == 'typing'
-  - mypy~=1.9.0 ; extra == 'typing'
-  - tomli ; extra == 'typing'
-  - typing-extensions>=3.7.4.3 ; extra == 'typing'
-  - uv>=0.1.18 ; extra == 'uv'
-  - virtualenv>=20.0.35 ; extra == 'virtualenv'
-  requires_python: '>=3.8'
 - conda: https://conda.anaconda.org/conda-forge/linux-64/bzip2-1.0.8-h4bc722e_7.conda
   sha256: 5ced96500d945fb286c9c838e54fa759aa04a7129c59800f0846b4335cee770d
   md5: 62ee74e96c5ebb0af99386de58cf9553
@@ -904,11 +862,6 @@ packages:
   purls: []
   size: 2947466
   timestamp: 1731377666602
-- pypi: https://files.pythonhosted.org/packages/88/ef/eb23f262cca3c0c4eb7ab1933c3b1f03d021f2c48f54763065b6f0e321be/packaging-24.2-py3-none-any.whl
-  name: packaging
-  version: '24.2'
-  sha256: 09abb1bccd265c01f4a3aa3f7a7db064b36514d2cba19a2f694fe6150451a759
-  requires_python: '>=3.8'
 - conda: https://conda.anaconda.org/conda-forge/noarch/packaging-24.2-pyhd8ed1ab_2.conda
   sha256: da157b19bcd398b9804c5c52fc000fcb8ab0525bdb9c70f95beaa0bb42f85af1
   md5: 3bfed7e6228ebf2f7b9eaa47f1b4e2aa
@@ -927,39 +880,6 @@ packages:
   license_family: MIT
   size: 20448
   timestamp: 1733232756001
-- conda: https://conda.anaconda.org/conda-forge/linux-64/pybind11-2.12.0-py311h9547e67_0.conda
-  sha256: 03dc8e5b8813c80940eded39aff8805dbdbf936aa9156ae891793d47f646e08d
-  md5: 219c7c2df72eede9d1d6042915b17928
-  depends:
-  - libgcc-ng >=12
-  - libstdcxx-ng >=12
-  - pybind11-global 2.12.0 py311h9547e67_0
-  - python >=3.11,<3.12.0a0
-  - python_abi 3.11.* *_cp311
-  constrains:
-  - pybind11-abi ==4
-  license: BSD-3-Clause
-  license_family: BSD
-  purls:
-  - pkg:pypi/pybind11?source=hash-mapping
-  size: 192743
-  timestamp: 1711603981536
-- conda: https://conda.anaconda.org/conda-forge/linux-64/pybind11-global-2.12.0-py311h9547e67_0.conda
-  sha256: 9ebe566b89f0eb4aed5335ad59196bfecdad9b713b4c707bf494deb02b3bbe91
-  md5: 0a205a1519d2e74a56b54b20408b4d4b
-  depends:
-  - libgcc-ng >=12
-  - libstdcxx-ng >=12
-  - python >=3.11,<3.12.0a0
-  - python_abi 3.11.* *_cp311
-  constrains:
-  - pybind11-abi ==4
-  license: BSD-3-Clause
-  license_family: BSD
-  purls:
-  - pkg:pypi/pybind11-global?source=hash-mapping
-  size: 176613
-  timestamp: 1711603958025
 - conda: https://conda.anaconda.org/conda-forge/noarch/pycparser-2.22-pyh29332c3_1.conda
   sha256: 79db7928d13fab2d892592223d7570f5061c192f27b9febd1a418427b719acc6
   md5: 12c566707c80111f9799308d9e265aef
@@ -1022,11 +942,6 @@ packages:
   license_family: Apache
   size: 1186011
   timestamp: 1725739433497
-- pypi: https://files.pythonhosted.org/packages/bd/24/12818598c362d7f300f18e74db45963dbcb85150324092410c8b49405e42/pyproject_hooks-1.2.0-py3-none-any.whl
-  name: pyproject-hooks
-  version: 1.2.0
-  sha256: 9e5c6bfa8dcc30091c74b0cf803c81fdd29d94f01992a7707bc97babb1141913
-  requires_python: '>=3.7'
 - conda: https://conda.anaconda.org/conda-forge/noarch/pysocks-1.7.1-pyha55dd90_7.conda
   sha256: ba3b032fa52709ce0d9fd388f63d330a026754587a2f461117cac9ab73d8d0d8
   md5: 461219d1a5bd61342293efa2c0c90eac
