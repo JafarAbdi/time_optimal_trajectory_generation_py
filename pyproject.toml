@@ -21,5 +21,6 @@ build-backend = "scikit_build_core.build"
 
 [dependency-groups]
 dev = [
+    "cibuildwheel>=3.0.1",
     "numpy>=2.3.1",
 ]

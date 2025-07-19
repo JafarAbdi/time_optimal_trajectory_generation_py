@@ -16,9 +16,8 @@ pixi run install
 pixi run python examples/example.py
 ```
 
-## Releasing a new version to conda
+## Test cibuildwheel locally
 
 ```bash
-pixi run conda-build
-pixi run upload --api-key <key> .build/conda/linux-64/XXX.conda
+CIBW_BUILD_VERBOSITY=1 CIBW_BUILD="cp3{10,11,12}-macosx_{x86_64,arm64} cp3{9,10,11,12}-manylinux_x86_64" uv run cibuildwheel . --platform linux
 ```
