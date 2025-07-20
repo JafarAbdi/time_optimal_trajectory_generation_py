@@ -6,7 +6,7 @@ readme = "README.md"
 authors = [
     { name = "JafarAbdi", email = "jafar.uruc@gmail.com" }
 ]
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 
 [project.scripts]
 time-optimal-trajectory-generation-py = "time_optimal_trajectory_generation_py:main"
