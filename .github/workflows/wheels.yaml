@@ -18,12 +18,12 @@ jobs:
             arch: arm64
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           submodules: 'recursive'
 
       - name: Build wheels
-        uses: pypa/cibuildwheel@v3.1.2
+        uses: pypa/cibuildwheel@v3.1.4
         with:
           package-dir: .
         env:
@@ -46,14 +46,14 @@ jobs:
       cancel-in-progress: true
     needs: [build_wheels]
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v5
         with:
           path: wheelhouse
           pattern: wheels-*
           merge-multiple: true
 
       - name: GitHub release
-        uses: ncipollo/release-action@v1.18.0
+        uses: ncipollo/release-action@v1.19.1
         with:
           prerelease: true
           tag: "prerelease"
